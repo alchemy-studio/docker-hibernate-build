@@ -1,0 +1,17 @@
+version: '3'
+services:
+  starter:
+    build: .
+    restart: always
+    volumes:
+      - /backups:/backups
+    environment:
+      REST_PREFIX: backend
+      REST_PORT: 3000
+      SERVER_NAME: www.example.com
+      DB_HOST: db
+      DB_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 8000:80
+      - 9001:9001

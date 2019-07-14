@@ -1,7 +1,7 @@
 version: '3'
 services:
   default:
-    image: weli/docker-hibernate-build
+    image: weli/docker-hibernate-build:latest
 #    restart:
     volumes:
       - /data:/data
@@ -9,6 +9,7 @@ services:
       DB_HOST: foo
       DB_USER: foo
       DB_PASSWORD:
+    command: tail -f /dev/null
     ports:
       - 8000:80
       - 9001:9001

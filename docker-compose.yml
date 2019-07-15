@@ -10,6 +10,6 @@ services:
       DB_USER: foo
       DB_PASSWORD:
     command: tail -f /dev/null
-    ports:
-      - 8000:80
-      - 9001:9001
+#    ports:
+#      - 8000:80
+#      - 9001:9001

@@ -5,11 +5,11 @@ services:
 #    restart:
     volumes:
       - /data:/data
-    environment:
-      DB_HOST: foo
-      DB_USER: foo
-      DB_PASSWORD:
-    command: tail -f /dev/null
+#    environment:
+#      DB_HOST: localhost
+#      DB_USER: foo
+#      DB_PASSWORD:
+    command: /var/run/postinstall.sh
 #    ports:
 #      - 8000:80
 #      - 9001:9001

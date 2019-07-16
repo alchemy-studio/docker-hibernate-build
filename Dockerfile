@@ -6,5 +6,7 @@ RUN  /etc/init.d/postgresql start &&\
     su postgres -c "psql --command \"CREATE DATABASE foo_db with owner foo_usr;\" "
 RUN mkdir work && cd work && git clone https://github.com/hibernate/hibernate-orm.git
 RUN cd work/hibernate-orm && ./gradlew compile
+COPY postinstall.sh /var/run
+
 
 

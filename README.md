@@ -136,7 +136,7 @@ hibernate-hikaricp                     utilities.gradle
 $
 ```
 
-这样，在`host`这边就可以直接访问容器里面的`hibnernate-orm`目录了。
+这样，在`host`这边就可以直接访问容器里面的`hibernate-orm`目录了。
 
 ## 开发模式
 

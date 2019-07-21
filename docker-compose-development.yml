@@ -1,0 +1,14 @@
+version: '3'
+services:
+  default:
+    image: weli/docker-hibernate-build:latest
+    #    restart:
+    #    volumes:
+    #      - /tmp:/tmp
+    #    environment:
+    #      DB_HOST: localhost
+    #      DB_USER: foo
+    #      DB_PASSWORD:
+    command: tail -f /dev/null
+    ports:
+      - 5432:5432

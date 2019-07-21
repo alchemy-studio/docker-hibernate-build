@@ -6,10 +6,16 @@
 
 ![](https://raw.githubusercontent.com/liweinan/docker-hibernate-build/master/imgs/F952E79C-45AB-4555-8A49-0DB888D57C8F.png)
 
-启动容器（注意容器会启动`postgresql`服务，要停掉`host`的`postgresql`服务）：
+启动容器，注意容器会启动`postgresql`服务，要停掉`host`的本地`postgresql`服务：
 
 ```bash
-$ docker-compose up
+$ pg_ctl -D /usr/local/var/postgres stop
+```
+
+停掉本地服务以后，运行下面的命令：
+
+```bash
+$ docker-compose -f docker-compose-production.yml up  
 ```
 
 ![](https://raw.githubusercontent.com/liweinan/docker-hibernate-build/master/imgs/DBB8F4FE-B9A1-47EC-945D-599E97BE5CC7.png)
@@ -21,5 +27,14 @@ $ docker exec -it docker-hibernate-build_default_1 bash
 ```
 
 ![](https://raw.githubusercontent.com/liweinan/docker-hibernate-build/master/imgs/17ADF2D1-BCCB-484D-9373-B6DF8AC4A4EF.png)
+
+
+todo: sshfs
+
+## 开发模式
+
+```bash
+$ docker-compose -f docker-compose-development.yml up  
+```
 
 ∎

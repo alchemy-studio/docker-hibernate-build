@@ -9,8 +9,8 @@ services:
 #      DB_HOST: localhost
 #      DB_USER: foo
 #      DB_PASSWORD:
-#    command: /var/run/postinstall.sh
-    command: tail -f /dev/null
+    command: /var/run/postinstall.sh
+#    command: tail -f /dev/null
     ports:
       - 5432:5432
 #      - 9001:9001

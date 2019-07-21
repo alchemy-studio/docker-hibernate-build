@@ -12,5 +12,4 @@ services:
     command: tail -f /dev/null
     ports:
       - 5432:5432
-    expose:
-      - 22
+      - 22:22

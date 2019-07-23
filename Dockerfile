@@ -9,6 +9,8 @@ RUN sed -ie "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" /etc/pos
 RUN echo "host all all 0.0.0.0/0 md5" >> /etc/postgresql/9.6/main/pg_hba.conf
 RUN mkdir work && cd work && git clone https://github.com/hibernate/hibernate-orm.git
 RUN cd work/hibernate-orm && ./gradlew compile
+COPY config.patch /work/hibernate-orm/
+RUN cd work/hibernate-orm && patch -p1 < config.patch
 COPY postinstall.sh /var/run
 
 # sshd

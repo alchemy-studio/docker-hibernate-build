@@ -1,5 +1,9 @@
 # 本容器在MacOS环境下的使用方法
 
+## clone项目
+
+首先把项目clone到本地。
+
 ## 安装java
 
 使用`sdkman`安装`java`：

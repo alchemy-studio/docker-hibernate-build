@@ -12,7 +12,7 @@ RUN mkdir work && cd work && git clone https://github.com/hibernate/hibernate-or
 RUN cd work/hibernate-orm && ./gradlew compile
 
 COPY config.patch work/hibernate-orm
-RUN apt-get -y install openssh-server telnet netcat
+RUN apt-get -y install patch
 RUN cd work/hibernate-orm && ls . && patch -p1 < config.patch
 
 COPY postinstall.sh /var/run
